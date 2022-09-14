@@ -1,0 +1,28 @@
+<%- include("header") -%>
+
+
+    <div class="box" id="heading">
+      <h1>It's a <%=kindofday%></h1>
+    </div>
+
+    <div class="box">
+      <ul>
+        <% for (let i=0; i<newlistitem.length; i++){%>
+          <div class="item">
+            <input type="checkbox">
+              <p><%= newlistitem[i] %></p>
+          </div>
+
+        <%}%>
+      </ul>
+
+    </div>
+
+
+<form class="item" action="/" method="post">
+  <label for="Todo item">Todo item = </label>
+  <input type="text" name="todoitem" >
+  <button type="submit" name="submit">add</button>
+</form>
+
+<%- include("footer") -%>
